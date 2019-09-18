@@ -288,6 +288,35 @@
             ]
           },
           {
+            "description": "Ctrl+f -> Right Arrow",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "com.googlecode.iterm2",
+                      "com.microsoft.VSCode"
+                    ],
+                    "type": "frontmost_application_unless"
+                  }
+                ],
+                "from": {
+                  "key_code": "f",
+                  "modifiers": {
+                    "mandatory": ["control"],
+                    "optional": ["caps_lock"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
             "description": "Ctrl+r-> select line",
             "manipulators": [
               {
@@ -536,7 +565,7 @@
             "manipulators": [
               {
                 "from": {
-                  "key_code": "semicolon",
+                  "key_code": "quote",
                   "modifiers": {
                     "mandatory": ["control"],
                     "optional": ["caps_lock"]
@@ -554,6 +583,32 @@
               }
             ]
           },
+          {
+            "description": "Ctrl+l -> Select line",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "mandatory": ["control"],
+                    "optional": ["caps_lock"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_arrow",
+                    "modifiers": "command"
+                  },
+                  {
+                    "key_code": "right_arrow",
+                    "modifiers": ["command", "shift"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+
           {
             "description": "Ctrl+t -> Down 10 lines",
             "manipulators": [
@@ -618,6 +673,7 @@
                   {
                     "bundle_identifiers": [
                       "com.googlecode.iterm2",
+                      "com.microsoft.Excel",
                       "com.microsoft.VSCode"
                     ],
                     "type": "frontmost_application_unless"
