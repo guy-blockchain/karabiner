@@ -264,10 +264,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "com.googlecode.iterm2",
-                      "com.microsoft.VSCode"
-                    ],
+                    "bundle_identifiers": ["com.microsoft.VSCode"],
                     "type": "frontmost_application_unless"
                   }
                 ],
@@ -716,6 +713,73 @@
                   },
                   {
                     "key_code": "up_arrow"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Ctrl+shift+ -> Default pw",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "com.googlecode.iterm2",
+                      "com.microsoft.Excel",
+                      "com.microsoft.VSCode"
+                    ],
+                    "type": "frontmost_application_unless"
+                  }
+                ],
+                "from": {
+                  "key_code": "backslash",
+                  "modifiers": {
+                    "mandatory": ["control", "shift"],
+                    "optional": ["caps_lock"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "a"
+                  },
+                  {
+                    "key_code": "s"
+                  },
+                  {
+                    "key_code": "d"
+                  },
+                  {
+                    "key_code": "f"
+                  },
+                  {
+                    "key_code": "1"
+                  },
+                  {
+                    "key_code": "2"
+                  },
+                  {
+                    "key_code": "3"
+                  },
+                  {
+                    "key_code": "4"
+                  },
+                  {
+                    "key_code": "1",
+                    "modifiers": ["shift"]
+                  },
+                  {
+                    "key_code": "2",
+                    "modifiers": ["shift"]
+                  },
+                  {
+                    "key_code": "3",
+                    "modifiers": ["shift"]
+                  },
+                  {
+                    "key_code": "4",
+                    "modifiers": ["shift"]
                   }
                 ],
                 "type": "basic"
